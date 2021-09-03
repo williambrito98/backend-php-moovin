@@ -78,6 +78,6 @@ class ContaPoupanca extends Conta
 
     public function __toString()
     {
-        return "Saldo: B$ {$this->saldo}\nLimite para Saque: B$ {$this->limiteSaque}\n";
+        return "Saldo: B$ " . number_format($this->saldo, 2) . "\nLimite para Saque: B$ " . number_format($this->limiteSaque, 2) . "\n";
     }
 }

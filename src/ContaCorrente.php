@@ -8,11 +8,6 @@ use Moovin\Job\Backend\Contracts\Conta;
 
 class ContaCorrente extends Conta
 {
-    // private $limiteSaque = 600;
-    // private $taxa = 2.50;
-    // private $responsavel;
-    // private $saldo = 0;
-
     function __construct(string $responsavel)
     {
         $this->responsavel = $responsavel;
@@ -82,6 +77,6 @@ class ContaCorrente extends Conta
 
     public function __toString()
     {
-        return "Saldo: B$ {$this->saldo}\nLimite para Saque: B$ {$this->limiteSaque}\n";
+        return "Saldo: B$ " . number_format($this->saldo, 2) . "\nLimite para Saque: B$ " . number_format($this->limiteSaque, 2) . "\n";
     }
 }
